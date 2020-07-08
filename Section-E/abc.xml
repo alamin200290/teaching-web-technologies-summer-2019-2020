@@ -1,0 +1,13 @@
+
+<students>
+	<student>
+		<name>Alamin</name>
+		<age>11</age>
+		<dept>CS</dept>
+	</student>
+	<student>
+		<name>XYZ</name>
+		<age>11</age>
+		<dept>CS</dept>
+	</student>
+</students>
