@@ -1,0 +1,17 @@
+<products>
+	<product >
+		<id>Al</id>
+		<name>Amin</name>
+		<unit_price>alamin@aiub.edu</unit_price>
+		<stock>SE</stock>
+		<status>SE</status>
+	</product>
+
+	<product>
+		<id>Al</id>
+		<name>Amin</name>
+		<unit_price>alamin@aiub.edu</unit_price>
+		<stock>SE</stock>
+		<status>SE</status>
+	</product>
+</products>
