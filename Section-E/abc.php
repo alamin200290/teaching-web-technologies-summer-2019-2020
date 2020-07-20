@@ -1,5 +1,10 @@
 <?php
 	
+	
+	//print_r($_GET);
+	echo $_GET['id'];
+
+
 	//print "alamin";
 	//echo "alamin";
 	//print("al-amin");
@@ -50,14 +55,46 @@
 
 	//echo $DBserver['sqlserver']['db'];
 
+	/*function printName(){
+		return "alamin";
+	}*/
+
+	$a = 19;
+	$b = 30;
+
+	function sum(){
+		//global $a;
+		//global $b;
+		$e = "alamin";
+		global $e;
+		return $GLOBALS['a']+$GLOBALS['b'];
+	}
+
+	//print_r($_SERVER) ;
+
+	//phpinfo();
+	$a = 'alamin';
+
+	echo "<h1>".$a."</h1>";
+
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title> <?php   ?></title>
 </head>
 <body>
-	<h1>This is PHP page</h1>
+	<h1></h1>
 </body>
 </html>
+
+
+<?php
+
+	function xyz(...$abc){
+		//var_dump()
+		print_r($abc);
+	}
+
+?>
