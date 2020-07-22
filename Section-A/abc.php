@@ -1,5 +1,12 @@
 <?php
 	
+	print_r($_GET);
+	//echo $_GET['id'];
+	
+	//print_r($_SERVER);	
+
+	//phpinfo();
+
 	//$a = 'alamin';
 	//$b = 12;
 	//$c = '3';
@@ -69,6 +76,48 @@ for ($i=0; $i < ; $i++) {
 	# code...
 }*/
 
+$a = "";
 
+/*if($a == ""){
+	echo "<h1>Not found!</h1>";
+}else{
+	echo "<h1>".$a."</h1>";
+}*/
+
+
+/*$a = print('test');
+
+if(print('test')){
+
+}
+
+echo "<br><h1>".$a."</h1>";*/
+
+
+/*$x = 20;
+$y = 20;
+
+function sum(){
+	
+	//global $x;
+	//global $y;
+
+	return $GLOBALS['x']+$GLOBALS['y'];
+}*/
+
+
+
+//echo sum();
 
 ?>
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+		<h2>This is <?php   echo "PHP";  ?> content</h2>
+</body>
+</html> -->
