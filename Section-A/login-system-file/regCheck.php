@@ -23,7 +23,6 @@
 			fclose($file);
 
 
-
 			header('location: login.html');
 		}
 
