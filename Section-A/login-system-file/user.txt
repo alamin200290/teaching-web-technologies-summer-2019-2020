@@ -1,0 +1,2 @@
+admin|test|alamin@aiub.edu
+xyz|abc|abc@aiub.edu
