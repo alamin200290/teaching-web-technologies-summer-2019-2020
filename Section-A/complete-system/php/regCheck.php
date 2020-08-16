@@ -1,6 +1,6 @@
 <?php 
 	session_start();
-	require_once('../db/db.php');
+	require_once('../service/userService.php');
 
 	if(isset($_POST['submit'])){
 
@@ -12,14 +12,15 @@
 			header('location: ../views/register.php?error=null_value');
 		}else{
 
-			$conn = dbConnection();
-			if(!$conn){
-				echo "DB connection error";
-			}
+			$user = [
+				'username'=> $username,
+				'password'=> $password,
+				'email'=> $email
+			];
 
-			$sql = "insert into users values('', '{$username}','{$password}', '{$email}','admin')";
+			$status = insert($user);
 
-			if(mysqli_query($conn, $sql)){
+			if($status){
 				header('location: ../views/login.php?success=registration_done');
 			}else{
 				header('location: ../views/register.php?error=db_error');
