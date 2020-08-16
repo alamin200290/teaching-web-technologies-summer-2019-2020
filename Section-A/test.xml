@@ -1,17 +1,7 @@
-<products>
-	<product >
-		<id>Al</id>
-		<name>Amin</name>
-		<unit_price>alamin@aiub.edu</unit_price>
-		<stock>SE</stock>
-		<status>SE</status>
-	</product>
+<product id=1>
+	<name>Book</name>
+	<unit_price>$20</unitPrice>
+	<stock>5</stock>
+	<4status>Ok</4status>
+</product>
 
-	<product>
-		<id>Al</id>
-		<name>Amin</name>
-		<unit_price>alamin@aiub.edu</unit_price>
-		<stock>SE</stock>
-		<status>SE</status>
-	</product>
-</products>
