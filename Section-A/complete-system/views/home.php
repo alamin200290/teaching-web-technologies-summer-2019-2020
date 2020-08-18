@@ -1,5 +1,5 @@
 <?php
-	reuire_once('../php/session_header.php');
+	require_once('../php/session_header.php');
 ?>
 
 <!DOCTYPE html>

@@ -1,6 +1,6 @@
 <?php
-	reuire_once('../php/session_header.php');
-	reuire_once('../service/userService.php');
+	require_once('../php/session_header.php');
+	require_once('../service/userService.php');
 ?>
 
 
@@ -22,13 +22,27 @@
 			<td>Username</td>
 			<td>Password</td>
 			<td>Email</td>
+			<td>Type</td>
+			<td>Action</td>
 		</tr>
+
+		<?php  
+			$users = getAllUser();
+			for ($i=0; $i != count($users); $i++) {  ?>
 		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td><?=$users[$i]['id']?></td>
+			<td><?=$users[$i]['username']?></td>
+			<td><?=$users[$i]['password']?></td>
+			<td><?=$users[$i]['email']?></td>
+			<td><?=$users[$i]['type']?></td>
+			<td>
+				<a href="edit.php?id=<?=$users[$i]['id']?>">Edit</a> |
+				<a href="delete.php?id=<?=$users[$i]['id']?>">Delete</a> 
+			</td>
 		</tr>
+
+		<?php } ?>
+		
 	</table>
 </body>
 </html>
