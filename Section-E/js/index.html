@@ -6,37 +6,26 @@
 <body>
 	<h1>JS Example</h1>
 
-	<form action="abc.php">
+	<form action="abc.php" onsubmit="return f1()">
 		<table>
 			<tr>
 				<td>Username</td>
-				<td><input type="text" name="username"></td>
-				<td></td>
+				<td><input type="text" id="username" name="username" onkeyup="f2()"></td>
+				<td id="userMsg"></td>
 			</tr>
 			<tr>
 				<td>Password</td>
 				<td><input type="password" name="password"></td>
-				<td></td>
+				<td id="passMsg"></td>
 			</tr>
 			<tr>
 				<td></td>
-				<td><input type="button" name="submit" value="Submit" onclick="f1(this)"></td>
+				<td><input type="submit" name="submit" value="Submit"></td>
 				<td></td>
 			</tr>
 		</table>
 	</form>
 
-	<script>
-		//console.log('test');
-		//alert('test');
-		//document.write('hfbjh');
-
-		function f1(obj){
-			console.log(obj);
-			/*element = document.getElementsByTagName('h1')[0];
-			element.innerHTML = 'New string...';*/
-		}
-
-	</script>
+	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
