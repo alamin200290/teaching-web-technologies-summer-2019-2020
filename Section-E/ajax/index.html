@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax Example</title>
+</head>
+<body>
+
+		<h1 id="msg">Ajax Example</h1>
+
+		<form method="post" action="abc.php">
+			<input type="text" id="name" name="name" onkeyup="ajax()">
+			
+			<input type="button" id="submit" name="submit" value="submit">
+			<input type="button" id="submit" name="submit" value="click" onclick="abc()">
+		</form>
+
+		<br>
+		<br>
+		<div id="data"></div>
+
+
+	<script type="text/javascript">
+		
+		function ajax(){
+
+			var name = document.getElementById('name').value;
+			var xhttp = new XMLHttpRequest();
+			
+			/*xhttp.open('GET', 'abc.php?name='+name, false);
+			xhttp.send();
+			
+			//document.getElementById('msg').innerHTML = xhttp.responseText;
+			xhttp.onreadystatechange = function(){
+				if(this.readyState == 4 && this.status == 200){
+					//document.getElementById('msg').innerHTML =  this.responseText;
+				}
+			}*/
+
+
+			xhttp.open('POST', 'abc.php', true);
+			xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+			xhttp.send('name='+name);
+			
+			//document.getElementById('msg').innerHTML = xhttp.responseText;
+			xhttp.onreadystatechange = function(){
+				if(this.readyState == 4 && this.status == 200){
+					document.getElementById('data').innerHTML =  this.responseText;
+
+				}
+			}
+		}
+
+		function abc(){
+			alert('test');
+		}
+	</script>
+</body>
+</html>
