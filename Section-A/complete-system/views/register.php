@@ -25,19 +25,32 @@
 					<td><input type="text" name="username"></td>
 				</tr>
 				<tr>
+					<td>Email</td>
+					<td><input type="text" name="email" onkeyup="f2()"></td>
+				</tr>
+				<tr>
 					<td>Password</td>
 					<td><input type="password" name="password"></td>
 				</tr>
 				<tr>
-					<td>Email</td>
-					<td><input type="text" name="email"></td>
-				</tr>
-				<tr>
 					<td></td>
-					<td><input type="submit" name="submit" value="Submit"></td>
+					<td>
+						<input type="button" name="submit" value="Submit" onclick="f1()">
+						<a href="login.php" style="display: none">login</a>
+					</td>
 				</tr>
 			</table>
 		</fieldset>
 	</form>
+
+	<script type="text/javascript">
+		function f1(){
+			document.getElementsByTagName('a')[0].style.display = 'inline';
+		}
+
+		function f2(){
+			
+		}
+	</script>
 </body>
 </html>
