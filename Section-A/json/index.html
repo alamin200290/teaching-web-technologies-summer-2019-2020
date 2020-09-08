@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax Example</title>
+</head>
+<body>
+
+		<h1 id="abc">Ajax Example</h1>
+
+		<form>
+			Name: <input type="text" id="name" name="name" /> <br>
+			Password: <input type="password" id="password" name="password" > <br>
+			Email: <input type="email" id="email" name="email" > <br>
+			<input type="button" id="button" name="button" value="submit" onclick="load()" /> 
+		</form>
+
+		<script>
+			function load(){
+
+				var name = document.getElementById('name').value;
+				var password = document.getElementById('password').value;
+				var email = document.getElementById('email').value;
+
+				var data = {
+					'name' : name,
+					'password' : password,
+					'email' : email
+				};
+
+				/*var obj = {
+					name : 'AIUB',
+					password : '123',
+					email : 'abc@gmail.com'
+				};
+*/
+				
+				var data = JSON.stringify(data);
+
+				var xhttp = new XMLHttpRequest();
+				xhttp.open('POST', 'abc.php', true);
+				xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+				xhttp.send('json='+data);
+
+				xhttp.onreadystatechange = function (){
+					if(this.readyState == 4 && this.status == 200){
+						if(this.responseText != ""){
+							var obj = JSON.parse(this.responseText);
+							alert(obj.name);
+						}
+					}	
+				}
+			}
+		</script>
+</body>
+</html>
