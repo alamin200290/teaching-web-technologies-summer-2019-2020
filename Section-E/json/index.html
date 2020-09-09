@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax Example</title>
+</head>
+<body>
+
+		<h1 id="msg">Ajax Example</h1>
+
+		<form method="post" action="abc.php">
+			Username: <input type="text" id="username" name="username"> <br>
+			Password: <input type="password" id="password" name="password"> <br>
+			<input type="button" id="submit" name="submit" value="click" onclick="ajax()">
+		</form>
+
+		<br>
+		<br>
+		<div id="data"></div>
+
+
+	<script type="text/javascript">
+		
+		function ajax(){
+
+			var username = document.getElementById('username').value;
+			var password = document.getElementById('password').value;
+			var xhttp = new XMLHttpRequest();
+
+
+			var data  = {
+				'username' 	: username,
+				'password' 	: password
+			};
+			
+			data = JSON.stringify(data);
+
+			/*var obj  = {
+				name 		: 'alamin',
+				password 	: '123',
+				email		: 'abc@gmail.com'
+			};*/
+
+			xhttp.open('POST', 'abc.php', true);
+			xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+			xhttp.responseType = "json";
+			xhttp.send('json='+data);
+			
+			//document.getElementById('msg').innerHTML = xhttp.responseText;
+			xhttp.onreadystatechange = function(){
+				if(this.readyState == 4 && this.status == 200){
+					//var obj = JSON.parse(this.responseText);
+					alert(this.response.username);
+				}
+			}
+		}
+
+	</script>
+</body>
+</html>
