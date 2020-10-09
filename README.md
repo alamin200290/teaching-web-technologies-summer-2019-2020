@@ -1,1 +1,1 @@
-# Summer_2020_webtech
+# teaching-web-technologies-summer-2019-20
